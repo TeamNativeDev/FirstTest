@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button, StatusBar } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  StatusBar,
+  SafeAreaView,
+} from 'react-native';
 
 const MainContainer = () => {
   const [num, setNum] = useState(0);
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.header}>
         First app where to play with React Native
       </Text>
@@ -20,7 +27,7 @@ const MainContainer = () => {
           title="decrase"
         />
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -33,13 +40,14 @@ const styles = StyleSheet.create({
     marginTop: StatusBar.currentHeight,
   },
   header: {
+    // marginTop: 20,
     fontSize: 20,
     textAlign: 'center',
   },
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-    marginTop: 20,
+    marginTop: 30,
   },
   counter: {
     fontSize: 25,
