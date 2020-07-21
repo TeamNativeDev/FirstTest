@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, View, Button, StatusBar } from "react-native";
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Button, StatusBar } from 'react-native';
 
 const MainContainer = () => {
   const [num, setNum] = useState(0);
@@ -13,7 +13,9 @@ const MainContainer = () => {
         <Text style={styles.counter}>{num}</Text>
         <Button
           onPress={() => {
-            if (num) setNum(num - 1);
+            if (num) {
+              setNum(num - 1);
+            }
           }}
           title="decrase"
         />
@@ -26,21 +28,21 @@ export default MainContainer;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "red",
+    backgroundColor: 'red',
     flex: 1,
     marginTop: StatusBar.currentHeight,
   },
   header: {
     fontSize: 20,
-    textAlign: "center",
+    textAlign: 'center',
   },
   buttonContainer: {
-    flexDirection: "row",
-    justifyContent: "space-evenly",
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
     marginTop: 20,
   },
   counter: {
     fontSize: 25,
-    fontWeight: "800",
+    fontWeight: '800',
   },
 });
